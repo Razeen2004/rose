@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1D0B0B;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar-container {
+    width: 1550px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Italianno', cursive;
+}
+
+.navbar-container .left-point .link{
+    text-decoration: none;
+}
+
+.navbar-container .left-point h1 {
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.navbar-container .mid-point ul{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.navbar-container .mid-point ul li{
+    /* text-decoration: none; */
+    list-style: none;
+    
+}
+
+.navbar-container .mid-point ul li button{
+    background:none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0px;
+    color: #D47318;
+}
+
+.navbar-container .mid-point ul li button{
+    cursor: pointer;
+}
+.navbar-container .right-point{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.search{
+    width: 2.3rem;
+    height: 2.38rem;
+}

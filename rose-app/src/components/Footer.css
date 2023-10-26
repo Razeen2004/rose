@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+.footer {
+    height: 8rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #2A0F0F;
+}
+
+.footer .container{
+    height: 100%;
+    width: 155rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .footer-element{
+    width: 20rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .footer-element .rose{
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: inherit;
+    position: relative;
+}
+
+.footer .footer-element h2{
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer .footer-element img{
+    width: 3.8rem;
+}
+
+.footer .footer-element img:hover{
+    opacity: 0.8;
+}

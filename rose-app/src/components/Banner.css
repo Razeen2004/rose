@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+.banner {
+    height: 55.5rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #1D0B0B;
+}
+
+.banner .container{
+    width: 155rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner .container .text-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.banner .container span{
+    content: "";
+    display: flex;
+    width: 30rem;
+    height: 0.4rem;
+    background: #D47318 ;
+}
+.banner .container h2{
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    font-size: 9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.bottle1{
+
+    position: absolute;
+    right: 25rem;
+    width: 31.2rem;
+    transform: rotate(41.394deg);
+    top: -60%;
+}
+.bottle2{
+
+    position: absolute;
+    right: 7.6rem;
+    width: 31.2rem;
+    transform: rotate(41.394deg);
+    bottom: -36%;
+}
+.rose{
+    color: rgba(34, 13, 13, 0.56);
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 45rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -50%;
+    left: -0%;
+}

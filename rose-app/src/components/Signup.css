@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.section{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+.section .left-sec{
+    width: 50%;
+    height: 100%;
+    background-color: #381111;
+}
+.section .right-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.section .right-sec .card{
+    display: flex;
+    width: 18vw;
+    height: auto;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.section .right-sec .card h1{
+    font-size: 1.5vw;
+}
+
+.section .right-sec .card input{
+    width: auto;
+    padding: 10px;
+    font-size: 0.8vw;
+    border: 1px solid #381111;
+}
+.submit-button{
+    border: none;
+    background-color: #381111;
+    color: #fff;
+    padding:20px;
+    font-size: 0.8vw;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.submit-button:hover{
+    
+    background-color: #fff;
+    color: #381111;
+    box-shadow:inset 0px 0px 0px 2px #381111;
+    font-size: 0.8vw;
+}
