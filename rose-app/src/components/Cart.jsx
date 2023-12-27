@@ -11,7 +11,15 @@ import verified from '../img/verified.png'
 
 const Cart = ({ products }) => {
 
-    let selectedOption = true;
+    const [name, setName] = useState("");
+    const [mob, setMob] = useState("");
+    const [email, setEmail] = useState("");
+    const [city, setCity] = useState("");
+    const [address, setAddress] = useState("");
+    const [state, setState] = useState("");
+    const [zip, setZip] = useState("");
+
+    const [selectedOption, setSelectedOption] = useState("");
 
     const [isAnimationVisible, setIsAnimationVisible] = useState(false);
 
@@ -21,6 +29,14 @@ const Cart = ({ products }) => {
             gsap.to('.checkout-done', { delay: 3, duration: 1, y: '-250%', opacity: 1, ease: 'power4.inOut' });
         }
     }, [isAnimationVisible]);
+
+    const submitTheOrder = (e) => {
+        e.preventDefault()
+        console.log(name,mob,email,city,address,state,zip,selectedOption)
+    }
+
+    const handleOptionChange = () => {
+    }
 
     return (
         <div className="cart">
@@ -33,30 +49,30 @@ const Cart = ({ products }) => {
                             <div className="box">
                                 <div className="input-sec">
                                     <label>
-                                        Name* <input type='text'  name="name" placeholder='Enter your Name' />
+                                        Name* <input type='text' value={name} onChange={(e) => { setName(e.target.value) }} name="name" placeholder='Enter your Name' />
                                     </label>
                                     <label>
-                                        Mobile Number* <input type='text'  name="mobileNumber" placeholder='Mobile No' />
-                                    </label>
-                                </div>
-                                <div className="input-sec">
-                                    <label>
-                                        Email* <input type='text'  name="email" placeholder='Enter your Email' />
-                                    </label>
-                                    <label>
-                                        City* <input type='text'  name="city" placeholder='City' />
+                                        Mobile Number* <input type='text' value={mob} onChange={(e) => { setMob(e.target.value) }} name="mobileNumber" placeholder='Mobile No' />
                                     </label>
                                 </div>
                                 <div className="input-sec">
                                     <label>
-                                        Address* <input type='text'  name="address" placeholder='Address' />
+                                        Email* <input type='text' value={email} onChange={(e) => { setEmail(e.target.value) }} name="email" placeholder='Enter your Email' />
+                                    </label>
+                                    <label>
+                                        City* <input type='text' value={city} onChange={(e) => { setCity(e.target.value) }} name="city" placeholder='City' />
+                                    </label>
+                                </div>
+                                <div className="input-sec">
+                                    <label>
+                                        Address* <input type='text' value={address} onChange={(e) => { setAddress(e.target.value) }} name="address" placeholder='Address' />
                                     </label>
                                     <div>
                                         <label>
-                                            State* <input type='text'  name="state" placeholder='State' />
+                                            State* <input type='text' value={state} onChange={(e) => { setState(e.target.value) }} name="state" placeholder='State' />
                                         </label>
                                         <label>
-                                            Zip* <input type='text'  name="zip" placeholder='Zip' />
+                                            Zip* <input type='text' value={zip} onChange={(e) => { setZip(e.target.value) }} name="zip" placeholder='Zip' />
                                         </label>
                                     </div>
                                 </div>
@@ -71,8 +87,7 @@ const Cart = ({ products }) => {
                                             type="radio"
                                             name="paymentOption"
                                             value="Online"
-                                            // checked={selectedOption === 'Online'}
-                                            // onChange={handleOptionChange}
+                                            onChange={(e)=>{setSelectedOption("Online")}}
                                         />
                                         Online Payment
                                     </label>
@@ -82,8 +97,7 @@ const Cart = ({ products }) => {
                                             type="radio"
                                             name="paymentOption"
                                             value="Cash"
-                                            // checked={selectedOption === 'Cash'}
-                                            // onChange={handleOptionChange}
+                                            onChange={(e)=>{setSelectedOption("Cash")}}
                                         />
                                         Cash On Delivery
                                     </label>
@@ -93,8 +107,7 @@ const Cart = ({ products }) => {
                                             type="radio"
                                             name="paymentOption"
                                             value="POS"
-                                            // checked={selectedOption === 'POS'}
-                                            // onChange={handleOptionChange}
+                                            onChange={(e)=>{setSelectedOption("POS")}}
                                         />
                                         POS On Delivery
                                     </label>
@@ -103,12 +116,12 @@ const Cart = ({ products }) => {
                         </div>
                     </div>
                     <div className="right-content">
-                        <form >
+                        <form onSubmit={submitTheOrder} >
                             <h2>Order Summary</h2>
                             <div className="box">
                                 <div className="product-sec">
                                     <div className="product-inner">
-                                            <Product/>
+                                        <Product />
                                     </div>
                                 </div>
                                 <div className="checkout-sec">

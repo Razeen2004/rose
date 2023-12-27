@@ -54,7 +54,7 @@ html {
 .section2 .container .left-side .product-container .top-content h2 {
     color: #2B0F0F;
     font-family: 'Italianno', cursive;
-    font-size: 90px;
+    font-size: 9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -65,7 +65,7 @@ html {
 .section2 .container .left-side .product-container .top-content p {
     color: #121212;
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -82,7 +82,7 @@ html {
 .section2 .container .left-side .product-container .bottom-content .product-name {
     color: #2B0F0F;
     font-family: 'Italianno', cursive;
-    font-size: 90px;
+    font-size: 9rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -106,17 +106,17 @@ html {
 .product-container .bottom-content .product-specs h2 {
     color: #727272;
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
 }
-
+s
 .product-container .bottom-content .product-specs h3 {
     color: #121212;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 20rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
