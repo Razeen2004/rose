@@ -1,10 +1,15 @@
-const zod = require('zod');
-const express = require('express');
-const jwt = require('jsonwebtoken')
-const app = express();
+const adminRouter = require('./routes/admin')
+const userRouter = require('./routes/user')
+const bodyParser = require('body-parser')
+const port = 3001;
 
 app.use(express.json());
 
-let username = zod.string();
-let password = zod.string().min(6);
+app.get("/admin", adminRouter);
 
+app.get("/user", userRouter);
+
+
+app.listen(port, (req, res) => {
+    console.log("listening on port " + port);
+});
