@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = Router();
-const adminMiddleware = require('../middleware/admin')
+const userMiddleware = require('../middleware/user')
 
-router.get('/signup', adminMiddleware, async (req, res) => {
+router.get('/signup', userMiddleware, async (req, res) => {
+    
 })

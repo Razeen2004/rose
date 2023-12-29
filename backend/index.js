@@ -1,15 +1,18 @@
-const adminRouter = require('./routes/admin')
-const userRouter = require('./routes/user')
-const bodyParser = require('body-parser')
-const port = 3001;
+const Users = require('./db/user')
+const express = require('express');
+const app = express()
+const cors = require('cors');
+const adminMiddleware = require('./middlewares/admin');
+const userMiddleware = require('./middlewares/user');
+
+app.use(cors())
 
 app.use(express.json());
 
-app.get("/admin", adminRouter);
+app.get('/admin' , adminMiddleware);
+app.get('/user' , userMiddleware);
 
-app.get("/user", userRouter);
 
-
-app.listen(port, (req, res) => {
-    console.log("listening on port " + port);
-});
+app.listen(port, ()=> {
+    console.log(`Server Listening at port ${port}`)
+})
