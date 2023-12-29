@@ -1,9 +1,8 @@
-const Users = require('./db/user')
+const adminMiddleware = require('./middlewares/admin');
+const userMiddleware = require('./middlewares/user');
 const express = require('express');
 const app = express()
 const cors = require('cors');
-const adminMiddleware = require('./middlewares/admin');
-const userMiddleware = require('./middlewares/user');
 
 app.use(cors())
 
