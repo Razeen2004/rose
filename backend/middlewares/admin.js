@@ -1,6 +1,7 @@
 const {Admin} = require('../db');
 
 const adminMiddleware = async (req, res, next) => {
+    // some comments in the middlewares to understand properly
     const username = req.headers.username;
     const password = req.headers.password;
 
@@ -19,7 +20,6 @@ const adminMiddleware = async (req, res, next) => {
             msg: 'Invalid username or password'
         })
     }
-
 }
 
 module.exports = adminMiddleware;
