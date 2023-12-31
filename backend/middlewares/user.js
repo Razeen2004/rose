@@ -1,6 +1,7 @@
 const {User} = require('../db');
 
 const userMiddleware = async (req, res, next) => {
+    // edited some routes
     const username = req.headers.username;
     const password = req.headers.password;
 
