@@ -20,7 +20,5 @@ const userMiddleware = async (req, res, next) => {
             msg: 'Invalid username or password'
         })
     }
-
 }
-
 module.exports = userMiddleware;
