@@ -1,35 +1,12 @@
 const mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost:27017/ROSE");
 
-mongoose.connect("mongodb://0.0.0.0://27017/Rose");
 
-const AdminSchema = new mongoose.Schema({
+const AdminSchema = mongoose.Schema({
     username: String,
     password: String,
 })
 
-const UserSchema = new mongoose.Schema({
-    username: String,
-    password: String,
-    purchasedDrinks: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Drinks'
-    }]
-})
+const Admin = new mongoose.model('Admin', AdminSchema);
 
-const DrinksSchema = new mongoose.Schema({
-    name: String,
-    description: String,
-    tag: String,
-    image: String,
-    price: Number,
-})
-
-const Admin = mongoose.model("Admin", AdminSchema);
-const User = mongoose.model("User", UserSchema);
-const Drink = mongoose.model("Drink", DrinksSchema);
-
-module.exports = {
-    Admin,
-    User,
-    Drink
-}
+module.exports = Admin;
