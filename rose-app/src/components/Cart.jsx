@@ -33,6 +33,7 @@ const Cart = ({ products }) => {
     const submitTheOrder = (e) => {
         e.preventDefault()
         console.log(name,mob,email,city,address,state,zip,selectedOption)
+        
     }
 
     const handleOptionChange = () => {
