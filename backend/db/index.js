@@ -7,6 +7,17 @@ const AdminSchema = mongoose.Schema({
     password: String,
 })
 
-const Admin = new mongoose.model('Admin', AdminSchema);
+const productSchema = mongoose.Schema({
+    name: String,
+    description: String,
+    tag: String,
+    price: Number,
+})
 
-module.exports = Admin;
+const Admin = new mongoose.model('Admin', AdminSchema);
+const Product = new mongoose.model('Product', productSchema);
+
+module.exports = { 
+    Admin: Admin,
+    Product: Product
+};
