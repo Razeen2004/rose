@@ -21,4 +21,5 @@ const adminMiddleware = async (req, res, next) => {
         })
     }
 }
+// added the connection
 module.exports = adminMiddleware;
