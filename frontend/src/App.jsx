@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-    dsadasd
+      <BrowserRouter>
+        <Route exact path="/" component={Home} />
+      </BrowserRouter>
     </>
   )
 }
