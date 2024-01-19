@@ -1,47 +1,50 @@
-import { useContext, useState } from "react";
-import { Context } from "./Context";
+import { RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
+import { count } from "../store/atoms/count";
 
 const Navbar = () => {
-  const [count, setCount] = useState(0);
-
+  
+  console.log("re-render Navbar Component")
   return (
     <div>
-      <Context.Provider value={count}>
-        <Wrapper setCount={setCount} />
-      </Context.Provider>
+      <RecoilRoot>
+        <Wrapper />
+      </RecoilRoot>
     </div>
   );
 };
 
-function Wrapper({ setCount }) {
+function Wrapper() {
+  console.log("re-render Wrapper Component")
   return (
     <>
       <Count />
-      <Button setCount={setCount} />
+      <Button />
     </>
   );
 }
 
 function Count() {
-  const count = useContext(Context);
-  return <div>{count}</div>;
+  const Count = useRecoilValue(count);
+
+  return <div>{Count}</div>;
 }
 
-function Button({ setCount }) {
-  const count = useContext(Context);
+function Button() {
+  
+  const [Count, setCount] = useRecoilState(count);
 
   return (
     <div>
       <button
         onClick={() => {
-          return setCount(count + 1);
+          return setCount(Count + 1);
         }}
       >
         Increment
       </button>
       <button
         onClick={() => {
-          return setCount(count - 1);
+          return setCount(Count - 1);
         }}
       >
         Decrement
