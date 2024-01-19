@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const Context = createContext({ count, setCount });
+export const Context = createContext(0);

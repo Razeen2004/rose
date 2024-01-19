@@ -6,20 +6,18 @@ const Navbar = () => {
 
   return (
     <div>
-      <Wrapper />
-      <Context.Provider value={{ count, setCount }}>
-        <Count />
-        <button />
+      <Context.Provider value={count}>
+        <Wrapper setCount={setCount} />
       </Context.Provider>
     </div>
   );
 };
 
-function Wrapper() {
+function Wrapper({ setCount }) {
   return (
     <>
       <Count />
-      <Button />
+      <Button setCount={setCount} />
     </>
   );
 }
@@ -29,13 +27,25 @@ function Count() {
   return <div>{count}</div>;
 }
 
-function Button() {
-  const { count, setCount } = useContext(Context);
+function Button({ setCount }) {
+  const count = useContext(Context);
 
   return (
     <div>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button
+        onClick={() => {
+          return setCount(count + 1);
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={() => {
+          return setCount(count - 1);
+        }}
+      >
+        Decrement
+      </button>
     </div>
   );
 }
