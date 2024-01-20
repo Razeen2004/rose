@@ -1,9 +1,12 @@
 import React from "react";
 import "./SecondSection.css";
+import { IoIosArrowRoundForward } from "react-icons/io";
+
+import bottle from "./images/bottle.png";
 
 const SecondSection = () => {
   return (
-    <div className="section">
+    <div className="section2">
       <div className="container">
         <div className="left">
           <div className="top">
@@ -20,13 +23,29 @@ const SecondSection = () => {
           </div>
           <div className="mid">
             <h2>Rosé Premium Gold</h2>
+            <div className="showcase">
+                <div className="showcase-top">
+
+                </div>
+                <div className="showcase-bottom">
+
+                </div>
+                <div className="field">
+                    <h3>Volume Left</h3>
+                    <span></span>
+                </div>
+            </div>
           </div>
           <div className="bottom">
-            <button>Add to Cart</button>
+            <button>Add to Cart<IoIosArrowRoundForward /></button>
             <h2>$194.99</h2>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+            <div className="cover-div">
+                <img src={bottle} alt="" />
+            </div>
+        </div>
       </div>
     </div>
   );
