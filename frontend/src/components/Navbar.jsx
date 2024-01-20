@@ -1,9 +1,13 @@
-import { RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
-import { count } from "../store/atoms/count";
+import {
+  RecoilRoot,
+  useRecoilState,
+  useRecoilValue,
+  useSetRecoilState,
+} from "recoil";
+import { count, evenSelector } from "../store/atoms/count";
 
 const Navbar = () => {
-  
-  console.log("re-render Navbar Component")
+  console.log("re-render Navbar Component");
   return (
     <div>
       <RecoilRoot>
@@ -14,11 +18,12 @@ const Navbar = () => {
 };
 
 function Wrapper() {
-  console.log("re-render Wrapper Component")
+  console.log("re-render Wrapper Component");
   return (
     <>
       <Count />
       <Button />
+      <Even />
     </>
   );
 }
@@ -30,27 +35,34 @@ function Count() {
 }
 
 function Button() {
-  
-  const [Count, setCount] = useRecoilState(count);
+  console.log("re-render Button Component");
+  // const [Count, setCount] = useRecoilState(count);
+  const setCount = useSetRecoilState(count);
 
   return (
     <div>
       <button
         onClick={() => {
-          return setCount(Count + 1);
+          return setCount((Count) => Count + 1);
         }}
       >
         Increment
       </button>
       <button
         onClick={() => {
-          return setCount(Count - 1);
+          return setCount((Count) => Count - 1);
         }}
       >
         Decrement
       </button>
     </div>
   );
+}
+
+function Even() {
+  const isEvenToggle = useRecoilValue(evenSelector);
+
+  return <div>{isEvenToggle ? "This number is Even" : ""}</div>;
 }
 
 export default Navbar;
