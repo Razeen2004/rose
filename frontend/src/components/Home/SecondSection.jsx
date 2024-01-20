@@ -4,8 +4,10 @@ import "./SecondSection.css";
 const SecondSection = () => {
   return (
     <div className="section">
-      <div className="left"></div>
-      <div className="right"></div>
+      <div className="container">
+        <div className="left"></div>
+        <div className="right"></div>
+      </div>
     </div>
   );
 };
