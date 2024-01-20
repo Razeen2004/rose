@@ -1,0 +1,63 @@
+.hero {
+    background-color: #1D0B0B;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.center-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-div .h2 {
+
+    width: 110rem;
+}
+
+.center-div .h2 p {
+    margin: 0;
+    color: #FFF;
+    text-align: right;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 10.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 99.9%;
+    /* 104.895px */
+    letter-spacing: -0.525rem;
+}
+
+.center-div .h2 span {
+    width: 17.2rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 61px;
+    background: #FF9A00;
+    color: #1E1D21;
+    text-align: right;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 99.9%;
+    /* 24.975px */
+    letter-spacing: -0.125px;
+}
+
+.center-div .h2 .top {
+    display: flex;
+    align-items: center;
+}
+
+.center-div .h2 .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
