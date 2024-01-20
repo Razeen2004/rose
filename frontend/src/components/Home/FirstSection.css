@@ -42,6 +42,7 @@
     line-height: 99.9%;
     /* 104.895px */
     letter-spacing: -0.525rem;
+    overflow: hidden;
 }
 
 .center-div .h2 span {
