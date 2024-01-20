@@ -1,68 +1,27 @@
-import {
-  RecoilRoot,
-  useRecoilState,
-  useRecoilValue,
-  useSetRecoilState,
-} from "recoil";
-import { count, evenSelector } from "../store/atoms/count";
-
+import React from "react";
+import "../assets/css/Navbar.css";
+import logo from "../assets/img/logo.svg";
+import { IoSearch } from "react-icons/io5";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 const Navbar = () => {
-  console.log("re-render Navbar Component");
   return (
-    <div>
-      <RecoilRoot>
-        <Wrapper />
-      </RecoilRoot>
+    <div className="navbar">
+      <div className="left">
+        <img src={logo} alt="" />
+      </div>
+      <div className="mid">
+        <ul>
+          <li>Store</li>
+          <li>Products</li>
+          <li>Price</li>
+        </ul>
+      </div>
+      <div className="right">
+        <IoSearch />
+        <HiOutlineShoppingBag />
+      </div>
     </div>
   );
 };
-
-function Wrapper() {
-  console.log("re-render Wrapper Component");
-  return (
-    <>
-      <Count />
-      <Button />
-      <Even />
-    </>
-  );
-}
-
-function Count() {
-  const Count = useRecoilValue(count);
-
-  return <div>{Count}</div>;
-}
-
-function Button() {
-  console.log("re-render Button Component");
-  // const [Count, setCount] = useRecoilState(count);
-  const setCount = useSetRecoilState(count);
-
-  return (
-    <div>
-      <button
-        onClick={() => {
-          return setCount((Count) => Count + 1);
-        }}
-      >
-        Increment
-      </button>
-      <button
-        onClick={() => {
-          return setCount((Count) => Count - 1);
-        }}
-      >
-        Decrement
-      </button>
-    </div>
-  );
-}
-
-function Even() {
-  const isEvenToggle = useRecoilValue(evenSelector);
-
-  return <div>{isEvenToggle ? "This number is Even" : ""}</div>;
-}
 
 export default Navbar;
