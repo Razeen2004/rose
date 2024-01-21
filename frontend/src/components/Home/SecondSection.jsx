@@ -10,6 +10,7 @@ const SecondSection = () => {
       <div className="container">
         <div className="left">
           <div className="top">
+            <span></span>
             <h2>Unlock the Elegance of Rosé</h2>
             <p>
               Embrace the allure of Rosé and elevate your moments to a whole new
@@ -24,27 +25,52 @@ const SecondSection = () => {
           <div className="mid">
             <h2>Rosé Premium Gold</h2>
             <div className="showcase">
-                <div className="showcase-top">
-
+              <div className="showcase-top">
+                <div className="showcase-items-left">
+                  <h3>Type</h3>
+                  <p>Rose</p>
                 </div>
-                <div className="showcase-bottom">
-
+                <div className="showcase-items-mid">
+                  <h3>Type</h3>
+                  <p>Rose</p>
                 </div>
-                <div className="field">
-                    <h3>Volume Left</h3>
-                    <span></span>
+                <div className="showcase-items-right">
+                  <h3>Type</h3>
+                  <p>Rose</p>
                 </div>
+              </div>
+              <div className="showcase-bottom">
+                <div className="showcase-items-left">
+                  <h3>Type</h3>
+                  <p>Rose</p>
+                </div>
+                <div className="showcase-items-mid">
+                  <h3>Type</h3>
+                  <p>Rose</p>
+                </div>
+                <div className="showcase-items-right">
+                  <h3>Type</h3>
+                  <p>Rose</p>
+                </div>
+              </div>
+              <div className="field">
+                <h3>Volume Left</h3>
+                <span></span>
+              </div>
             </div>
           </div>
           <div className="bottom">
-            <button>Add to Cart<IoIosArrowRoundForward /></button>
+            <button>
+              Add to Cart
+              <IoIosArrowRoundForward />
+            </button>
             <h2>$194.99</h2>
           </div>
         </div>
         <div className="right">
-            <div className="cover-div">
-                <img src={bottle} alt="" />
-            </div>
+          <div className="cover-div">
+            <img src={bottle} alt="" />
+          </div>
         </div>
       </div>
     </div>

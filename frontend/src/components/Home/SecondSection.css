@@ -16,6 +16,18 @@
     height: 90rem;
     box-sizing: border-box;
     padding-left: 18.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section2 .container .left .top span {
+    width: 30rem;
+    height: 0.4rem;
+    background-color: #2B0F0F;
+    content: "";
+    display: flex;
+    margin-bottom: 2.6rem;
 }
 
 .section2 .container .left .top h2,
@@ -28,6 +40,96 @@
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
+}
+
+.section2 .container .left .mid h2 {
+    margin-top: 4.5rem;
+}
+
+.section2 .container .left .mid .showcase {
+    display: flex;
+    flex-direction: column;
+    width: 54rem;
+    gap: 3rem;
+}
+
+.section2 .container .left .mid .showcase .showcase-top,
+.section2 .container .left .mid .showcase .showcase-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.section2 .container .left .mid .showcase .showcase-bottom {
+    border-bottom: 2px solid #B16927;
+    padding-bottom: 2.8rem;
+}
+
+.section2 .container .left .mid .showcase .showcase-top div,
+.section2 .container .left .mid .showcase .showcase-bottom div {
+    width: 12rem;
+}
+
+.section2 .container .left .mid .showcase .showcase-top div h3,
+.section2 .container .left .mid .showcase .showcase-bottom div h3 {
+    color: #727272;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.section2 .container .left .mid .showcase .showcase-top div p,
+.section2 .container .left .mid .showcase .showcase-bottom div p {
+    color: #121212;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.section2 .container .left .mid .showcase .field {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 5rem;
+}
+
+.section2 .container .left .mid .showcase .field h3 {
+    color: #727272;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.section2 .container .left .mid .showcase .field span {
+    width: 53.6rem;
+    height: 2.2rem;
+    background-color: #D4D4D4;
+    position: relative;
+}
+
+.section2 .container .left .mid .showcase .field span:before {
+    content: "";
+    display: flex;
+    width: 75%;
+    height: 100%;
+    background-color: #B16927;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .section2 .container .left .top p {
@@ -66,9 +168,10 @@
     border: none;
 }
 
-.section2 .container .left .bottom button svg{
+.section2 .container .left .bottom button svg {
     font-size: 3rem;
 }
+
 .section2 .container .left .bottom h2 {
     color: #000;
     font-family: 'Poppins', sans-serif;
