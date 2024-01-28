@@ -76,5 +76,5 @@ const SecondSection = () => {
     </div>
   );
 };
-
+// will complete this project in a month!!!
 export default SecondSection;
