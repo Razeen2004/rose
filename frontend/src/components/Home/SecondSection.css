@@ -69,6 +69,7 @@
 .section2 .container .left .mid .showcase .showcase-top div,
 .section2 .container .left .mid .showcase .showcase-bottom div {
     width: 12rem;
+    white-space: nowrap;
 }
 
 .section2 .container .left .mid .showcase .showcase-top div h3,

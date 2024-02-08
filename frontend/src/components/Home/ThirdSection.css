@@ -1,0 +1,74 @@
+.section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.section3 .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #2A0F0F;
+}
+
+.section3 .container .left-sec {
+    min-width: 87.2rem;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background-color: #2A0F0F;
+}
+
+.section3 .container .right-sec {
+    width: auto;
+    background: #1D0B0B;
+    padding: 10.3rem 12.3rem 6.3rem 8.8rem;
+    position: relative;
+}
+
+.section3 .container .right-sec span {
+    width: 30rem;
+    height: 0.4rem;
+    background-color: #D47318;
+    content: "";
+    display: flex;
+    margin-bottom: 2.6rem;
+}
+
+.section3 .container .right-sec h2{
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    margin: 0;
+    font-size: 9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.section3 .container .right-sec h3{
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    margin: 0;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.section3 .container .right-sec p{
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    opacity: 51%;
+    margin-top: 0;
+}
