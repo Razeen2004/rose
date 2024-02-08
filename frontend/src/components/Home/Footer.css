@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    height: 8rem;
+    background-color: #2A0F0F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 17.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.footer h2{
+    margin: 0;
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    font-size: 8rem;
+    font-weight: 400;
+}
+
+.footer h3{
+    margin: 0;
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+}
