@@ -28,29 +28,29 @@ const SecondSection = () => {
               <div className="showcase-top">
                 <div className="showcase-items-left">
                   <h3>Type</h3>
-                  <p>Rose</p>
+                  <p>Rosé</p>
                 </div>
                 <div className="showcase-items-mid">
-                  <h3>Type</h3>
-                  <p>Rose</p>
+                  <h3>Grape</h3>
+                  <p>Merlot</p>
                 </div>
                 <div className="showcase-items-right">
-                  <h3>Type</h3>
-                  <p>Rose</p>
+                  <h3>Bottle Size</h3>
+                  <p>750 ml</p>
                 </div>
               </div>
               <div className="showcase-bottom">
                 <div className="showcase-items-left">
-                  <h3>Type</h3>
-                  <p>Rose</p>
+                  <h3>Dosage</h3>
+                  <p>Semi-Dry</p>
                 </div>
                 <div className="showcase-items-mid">
-                  <h3>Type</h3>
-                  <p>Rose</p>
+                  <h3>Number</h3>
+                  <p>MRIT - 969</p>
                 </div>
                 <div className="showcase-items-right">
-                  <h3>Type</h3>
-                  <p>Rose</p>
+                  <h3>Released Date</h3>
+                  <p>1 - 1 - 2003</p>
                 </div>
               </div>
               <div className="field">
