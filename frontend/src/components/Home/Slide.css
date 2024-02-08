@@ -1,0 +1,46 @@
+.slide{
+    height: 50.5rem;
+    width: 100%;
+    background-color: #1D0B0B;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left:18.1rem ;
+    box-sizing: border-box;
+}
+
+.slide .bottle1{
+    width: 31rem;
+    right: 18rem;
+    transform: rotate(41.39deg);
+    top: -43rem;
+    position: absolute;
+}
+.slide .bottle2{
+    width: 31rem;
+    right: 8rem;
+    transform: rotate(41.39deg);
+    bottom: -21rem;
+    position: absolute;
+}
+
+span {
+    width: 30rem;
+    height: 0.4rem;
+    background-color: #D47318;
+    content: "";
+    display: flex;
+    margin-bottom: 2.6rem;
+}
+h2{
+    color: #D47318;
+    font-family: 'Italianno', cursive;
+    margin: 0;
+    font-size: 9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
