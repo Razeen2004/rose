@@ -10,7 +10,11 @@ const productSchema = mongoose.Schema({
   name: String,
   description: String,
   tag: String,
+  image: String,
   price: Number,
+  bottleSize: Number,
+  bottleHash: String,
+  type: String,
   admin: { type: mongoose.Types.ObjectId, ref: 'Admin' },
 });
 
