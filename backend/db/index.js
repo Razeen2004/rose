@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/ROSE");
 
 const adminSchema = mongoose.Schema({
+  firstname: { type: String, required: true },
+  lastname: { type: String, required: true },
   username: { type: String, required: true },
   password: { type: String, required: true },
 });
@@ -15,7 +17,7 @@ const productSchema = mongoose.Schema({
   bottleSize: Number,
   bottleHash: String,
   type: String,
-  admin: { type: mongoose.Types.ObjectId, ref: 'Admin' },
+  admin: { type: mongoose.Types.ObjectId, ref: "Admin" },
 });
 
 const Admin = new mongoose.model("Admin", adminSchema);

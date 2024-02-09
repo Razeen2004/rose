@@ -9,7 +9,7 @@ const jwtSecret = 'your_jwt_secret';
 // Register a new admin user
 router.post('/register', async (req, res) => {
     try {
-      const { username, password } = req.body;
+      const { username, password, firstname, lastname } = req.body;
   
       // Check if admin already exists
       const existingAdmin = await Admin.findOne({ username });
@@ -23,6 +23,8 @@ router.post('/register', async (req, res) => {
       // Create new admin user
       const admin = new Admin({
         username,
+        firstname,
+        lastname,
         password: hashedPassword,
       });
       await admin.save();
