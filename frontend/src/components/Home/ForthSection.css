@@ -1,0 +1,82 @@
+.section4{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 9.6rem 16.8rem;
+    gap: 5rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.section4 span{
+    background-color: #2B0F0F;
+}
+.section4 h2{
+    color: #2B0F0F;
+}
+
+.section4 .bottom{
+    width: 100%;
+}
+
+.section4 .bottom .product-cards{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.section4 .bottom .product-cards .product-card{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section4 .bottom .product-cards .product-card .card-top{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section4 .bottom .product-cards .product-card .card-top img{
+    height: 80%;
+}
+
+.section4 .bottom .product-cards .product-card .card-bottom{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section4 .bottom .product-cards .product-card .card-bottom h2{
+    color: #000;
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.section4 .bottom .product-cards .product-card .card-bottom p{
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.section4 .bottom .product-cards .product-card .card-bottom button{
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2B0F0F;
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5rem;
+    border: none;
+    cursor: pointer;
+}
