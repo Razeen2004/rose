@@ -9,24 +9,23 @@ const Register = () => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const onHandleClick = async (e) => {
+  const onHandleClick = (e) => {
     e.preventDefault();
 
-    try {
-      const data = await axios.post("http://localhost:8000/api/auth/register", {
-        firstName: firstname,
-        lastName: lastname,
-        username: username,
-        password: password
-      }, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      })
-    }catch (error) {
-      console.log(error);
-    }
+    let data = JSON.stringify({ firstname: firstname, lastname: lastname, username: username, password: password });
 
+    axios.post("http://localhost:8000/api/auth/register",
+      data, {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   };
 
   return (
