@@ -2,15 +2,31 @@ import React, { useState } from "react";
 import Rose from "./Home/images/LOGO BANNER.png";
 import "./Register.css";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 const Register = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const onHandleClick = (e) => {
+  const onHandleClick = async (e) => {
     e.preventDefault();
+
+    try {
+      const data = await axios.post("http://localhost:8000/api/auth/register", {
+        firstName: firstname,
+        lastName: lastname,
+        username: username,
+        password: password
+      }, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
+    }catch (error) {
+      console.log(error);
+    }
+
   };
 
   return (
